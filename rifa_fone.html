@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifa Beneficente - 200 Números</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>🎟️ Rifa Beneficente</h1>
+      <p class="subtitle">Escolha um ou mais números de 001 a 200</p>
+
+      <div class="info">
+        <p><strong>Prêmio:</strong> <span id="premio">Informe o prêmio</span></p>
+        <p><strong>Valor:</strong> R$ <span id="valor">0,00</span></p>
+        <p><strong>Data do sorteio:</strong> <span id="dataSorteio">__/__/____</span></p>
+        <p><strong>Organizador:</strong> <span id="organizador">Seu nome</span></p>
+      </div>
+
+      <h2>Números da rifa</h2>
+      <p class="legenda">
+        <span class="bolinha azul"></span> selecionado
+        <span class="bolinha vermelho"></span> vendido
+      </p>
+
+      <div id="numeros" class="grid"></div>
+
+      <div class="formulario">
+        <h2>Dados do participante</h2>
+
+        <input type="text" id="nome" placeholder="Nome do participante">
+        <input type="tel" id="telefone" placeholder="Telefone">
+        <textarea id="numerosEscolhidos" placeholder="Números escolhidos" readonly></textarea>
+
+        <button onclick="confirmarParticipacao()">Confirmar participação</button>
+        <button class="whatsapp" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
+        <button class="limpar-selecao" onclick="limparSelecao()">Limpar seleção</button>
+        <button class="limpar" onclick="limparRifa()">Limpar números vendidos</button>
+      </div>
+
+      <p id="mensagem"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

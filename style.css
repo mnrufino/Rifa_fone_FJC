@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f6ff;
+  color: #222;
+}
+
+.container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  text-align: center;
+  color: #0057b8;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.info {
+  background: #eef5ff;
+  border-left: 5px solid #0057b8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  color: #0057b8;
+}
+
+.legenda {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.bolinha {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 4px;
+}
+
+.azul {
+  background: #0066cc;
+}
+
+.vermelho {
+  background: #cc0000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+}
+
+.numero {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  color: #222;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.numero:hover {
+  background: #e8f0ff;
+}
+
+.numero.selecionado {
+  background: #0066cc;
+  color: white;
+  border-color: #0066cc;
+}
+
+.numero.vendido {
+  background: #cc0000;
+  color: white;
+  border-color: #cc0000;
+  cursor: not-allowed;
+}
+
+.formulario {
+  margin-top: 25px;
+  display: grid;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #0066cc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004f99;
+}
+
+button.whatsapp {
+  background: #25d366;
+}
+
+button.whatsapp:hover {
+  background: #1da851;
+}
+
+button.limpar-selecao {
+  background: #555;
+}
+
+button.limpar-selecao:hover {
+  background: #333;
+}
+
+button.limpar {
+  background: #cc0000;
+}
+
+button.limpar:hover {
+  background: #990000;
+}
+
+#mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
